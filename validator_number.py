@@ -49,11 +49,11 @@ class NumberValidator(object):
 
                 while divisor <= to_divide: # if to_divide is divisible by divisor yet
                     
-                    while to_divide%divisor == 0:
+                    while to_divide % divisor == 0: # if is divisible do next
                         to_divide = to_divide/divisor
                         number_factor[divisor] = number_factor.get(divisor,0)+1 # adding factor quantity
 
-                    divisor += 1
+                    divisor += 1 # next divisor when to_divide is not divisible for current divisor
 
                 """
                     Replacing factor quantity if validated factor not exist or already exists and its value is lower than validated
